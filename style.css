@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    height: 100vh; /* Damit der Inhalt vertikal in der Mitte bleibt */
+    margin: 0;
+    font-size: 1em; /* Setze eine Standard-Schriftgröße */
+}
+
+.typed-out {
+    overflow: hidden;
+    border-right: .26em solid gray;
+    white-space: nowrap;
+    margin: 0 auto;
+    display: inline-block;
+    max-width: fit-content;
+    animation: 
+        typing 4s steps(40, end),
+        blink-caret .5s step-end infinite;
+    font-size: 20px;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: gray }
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+@keyframes wave-animation {
+    0% { transform: rotate(0.0deg) }
+    10% { transform: rotate(14.0deg) }
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate(0.0deg) }
+    100% { transform: rotate(0.0deg) }
+}
+@media only screen and (max-width: 700px) {
+    .typed-out{
+        font-size: 10px;
+    }
+}
